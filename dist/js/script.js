@@ -26,7 +26,7 @@ hamburger.addEventListener('click', function () {
 
 // KLIK DILUAR HAMBURGER
 window.addEventListener('click', function (e) {
-    if (e.target != hamburger && e.target != navMenu && e.target != darkToggle) {
+    if (e.target != hamburger && e.target != navMenu) {
         hamburger.classList.remove('hamburger-active');
         navMenu.classList.add('hidden');
     }
@@ -47,7 +47,7 @@ darkToggle.addEventListener('click', function () {
 });
 
 // pindahkan toggle sesuai mode
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matcMedia('(prefers-color-scheme: dark)').matches)) {
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     darkToggle.checked = true;
 } else {
     darkToggle.checked = false;

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="dist/css/andi_style.css" />
 
     <script>
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matcMedia('(prefers-color-scheme: dark)').matches)) {
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         } else {
             document.documentElement.classList.remove('dark');
@@ -20,7 +20,7 @@
 <body>
 
     <!-- Header Start -->
-    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+    <header class="bg-transparent dark:bg-dark absolute top-0 left-0 w-full flex items-center z-10">
         <div class="container lg:px-16">
             <div class="flex items-center justify-between relative">
                 <div class="px-4">
@@ -34,12 +34,13 @@
                     </button>
 
                     <nav id="nav-menu"
-                        class="hidden absolute py-5 bg-white shadow-xl rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 lg:dark:bg-transparent">
+                        class="hidden absolute py-5 shadow-xl rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 lg:dark:bg-transparent">
                         <ul class="block lg:flex">
                             <li class="group">
                                 <a href="#home"
                                     class="font-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">
-                                    Beranda</a>
+                                    Beranda
+                                </a>
                             </li>
                             <li class="group">
                                 <a href="#about"
@@ -90,7 +91,7 @@
     <!-- Header End -->
 
     <!-- HERO SECTION START -->
-    <section id="home" class="pt-24 lg:pt-8 sm:pt-24 sm:mt-20 dark:bg-dark">
+    <section id="home" class="pt-24 lg:pt-8 sm:pt-24 sm:mt-18 dark:bg-dark">
         <div class="container lg:px-16">
             <div class="flex flex-wrap">
                 <div class="w-full self-center px-4 lg:w-1/2">
