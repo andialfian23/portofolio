@@ -592,10 +592,6 @@ video {
   bottom: 1rem;
 }
 
-.left-0 {
-  left: 0px;
-}
-
 .left-1\/2 {
   left: 50%;
 }
@@ -610,6 +606,10 @@ video {
 
 .top-full {
   top: 100%;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .z-10 {
@@ -981,6 +981,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1003,6 +1008,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .text-2xl {
@@ -1350,10 +1359,6 @@ body{
 }
 
 @media (min-width: 640px) {
-  .sm\:mt-20 {
-    margin-top: 5rem;
-  }
-
   .sm\:pt-24 {
     padding-top: 6rem;
   }
