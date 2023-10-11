@@ -53,4 +53,45 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
     darkToggle.checked = false;
 }
 
+const btn_my_project = document.querySelector("#btn-my-project");
+const btn_team_project = document.querySelector("#btn-team-project");
+const sec_my_project = document.querySelector("#my-project");
+const sec_team_project = document.querySelector("#team-project");
+
+sec_team_project.classList.add("hidden");
+btn_my_project.classList.add("bg-slate-200");
+btn_my_project.classList.add("text-indigo-900");
+btn_team_project.classList.add("bg-dark");
+btn_team_project.classList.add("text-white");
+
+btn_my_project.addEventListener("click", function () {
+  sec_my_project.classList.remove("hidden");
+  sec_team_project.classList.add("hidden");
+
+  btn_my_project.classList.remove("bg-dark");
+  btn_my_project.classList.remove("text-white");
+  btn_my_project.classList.add("bg-slate-200");
+  btn_my_project.classList.add("text-indigo-900");
+
+  btn_team_project.classList.add("bg-dark");
+  btn_team_project.classList.add("text-white");
+  btn_team_project.classList.remove("bg-slate-200");
+  btn_team_project.classList.remove("text-indigo-900");
+});
+
+btn_team_project.addEventListener("click", function () {
+  sec_my_project.classList.add("hidden");
+  sec_team_project.classList.remove("hidden");
+
+  btn_my_project.classList.remove("bg-slate-200");
+  btn_my_project.classList.remove("text-indigo-900");
+  btn_my_project.classList.add("bg-dark");
+  btn_my_project.classList.add("text-white");
+
+  btn_team_project.classList.remove("bg-dark");
+  btn_team_project.classList.remove("text-white");
+  btn_team_project.classList.add("bg-slate-200");
+  btn_team_project.classList.add("text-indigo-900");
+});
+
 
